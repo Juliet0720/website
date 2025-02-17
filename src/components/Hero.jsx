@@ -12,7 +12,7 @@ const Hero = () => {
                 </nav>
     
                 <div className="hero-content">
-                    <img src="./src/assets/Profile.jpg" alt="Juliet" className="hero-image" />
+                    <img src="src/assets/Profile.jpg" alt="Juliet" className="hero-image" />
                     <div className="hero-text">
                         <h1 className="hero-title">Juliet Icawalo</h1>
                         <p className="hero-subtitle"> Front-end Web Developer</p>
