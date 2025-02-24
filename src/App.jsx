@@ -1,6 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css'
 import Hero from '/src/components/Hero'
+import About from '/src/pages/about'
+import Project from '/src/pages/project'
+
 
 function App() {
   /* const [count, setCount] = useState(0);
@@ -10,6 +13,9 @@ function App() {
       <div>
         <Routes>
           <Route path='/' element={<Hero/>} />
+          <Route path='/about' element={<About/>} /> 
+          <Route path='/project' element={<Project/>} /> 
+
         </Routes>
       </div>
     
