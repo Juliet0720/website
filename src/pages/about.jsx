@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import myPhoto from "src/assets/467163471_4072691219642510_2871245258680640979_n.jpg"
 
 const About = () => {
     return (
@@ -31,7 +32,7 @@ const About = () => {
       </div>
     </div>
     <div className="image-container">
-      <img src="src/assets/467163471_4072691219642510_2871245258680640979_n.jpg" alt="Juliet" className="hero-image" />
+      <img className='hero-image' src={myPhoto} alt="myPhoto" />
     </div>
   </div>
 </section>
