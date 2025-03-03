@@ -1,6 +1,13 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
-import myPhoto from "../assets/myPhoto.jpg"
+import myPhoto from "../assets/myPhoto.jpg";
+import logoHTML from "../assets/html-logo.png";
+import logoCSS from "../assets/css-logo.png";
+import logoJS from "../assets/javascript-logo.png";
+import logoPS from "../assets/photoshop-logo.png";
+import logoReact from "../assets/react-logo.png";
+import logoIllustrator from "../assets/illustrator-logo.png";
+
 
 const About = () => {
     return (
@@ -42,12 +49,12 @@ const About = () => {
             <p className="desc"> I specialize in a range of languages,frameworks and tools, including:</p>
         <ul>
              <li>
-                <img src="src\assets\HTML5_logo_and_wordmark.svg.png" className="logo" alt="HTML"></img>
-                <img src="src\assets\5968242.png"className="logo" alt="CSS"></img>
-                <img src="src\assets\0_6c0myzTJcuOTi_vU.png" className="logo" alt=" Javascript" />
-                <img src="src\assets\png-transparent-js-react-js-logo-react-react-native-logos-icon.png" className="logo" alt="React" />
-                <img src="src\assets\png-transparent-adobe-photoshop-macos-bigsur-icon-thumbnail.png" className="logo" alt="Photoshop" />
-                <img src="src\assets\pngtree-adobe-illustrator-ai-icon-png-image_4899504.png" className="logo" alt="Illustrator" />
+                <img src={logoHTML} className="logo" alt="HTML"></img>
+                <img src={logoCSS} className="logo"alt="CSS"></img>
+                <img src={logoJS} className="logo" alt=" Javascript" />
+                <img src={logoReact} className="logo" alt="React" />
+                <img src={logoPS} className="logo" alt="Photoshop" />
+                <img src={logoIllustrator} className="logo" alt="Illustrator" />
              </li>
              
         </ul>
