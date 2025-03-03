@@ -1,5 +1,6 @@
+import React from 'react'
 import { NavLink } from "react-router-dom";
-import myPhoto from "src/assets/467163471_4072691219642510_2871245258680640979_n.jpg"
+import myPhoto from "../assets/myPhoto.jpg"
 
 const About = () => {
     return (
