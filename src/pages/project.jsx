@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import React from 'react'
+import React, { useState } from 'react'
 import logo from "../assets/Logo only.png"
 import primaryLogo from "../assets/Primary.png"
 import secondaryLogo from "../assets/Secondary.png"
@@ -11,13 +11,26 @@ import pictureFive from "../assets/IMG_3024@362102928.jpg"
 import pictureSix from "../assets/IMG_3045.jpg"
 import pictureSeven from "../assets/IMG_3166.jpg"
 import pictureEight from "../assets/6186024448944095280.jpg"
+import myLogo from "../assets/julsLogo.png";
 
 
 const Project = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  
   return(
     <section className="projects">
        <nav className="navbar">
-                    <ul className="navbar-links">
+        <div className="navbar-left">
+          <img className="logoImage" src={myLogo} alt="Logo" />
+        </div>
+        
+        {/* ✅ Hamburger Button (Changes Between ☰ and ✖) */}
+        <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? "✖" : "☰"}
+        </button>
+        
+        {/* ✅ Navbar Links */}
+        <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
                         <li><NavLink to="/about" className="navbar-link">About</NavLink></li>
                         
                     </ul>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from "react-router-dom";
 import myPhoto from "../assets/myPhoto.jpg";
 import logoHTML from "../assets/html-logo.png";
@@ -7,13 +7,26 @@ import logoJS from "../assets/javascript-logo.png";
 import logoPS from "../assets/photoshop-logo.png";
 import logoReact from "../assets/react-logo.png";
 import logoIllustrator from "../assets/illustrator-logo.png";
+import myLogo from "../assets/julsLogo.png";
 
 
 const About = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
     return (
         <div>
             <nav className="navbar">
-                    <ul className="navbar-links">
+              <div className="navbar-left">
+                <img className="logoImage" src={myLogo} alt="Logo" />
+              </div>
+
+              {/* ✅ Hamburger Button (Changes Between ☰ and ✖) */}
+              <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+                {isOpen ? "✖" : "☰"}
+              </button>
+              
+              {/* ✅ Navbar Links */}
+              <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
                        <li><NavLink to="/" className="navbar-link">Home</NavLink></li>
                         <li><NavLink to="/project" className="navbar-link">Projects</NavLink></li>
                         
