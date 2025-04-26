@@ -34,10 +34,18 @@ body {
     width: 100%;
    background-color: black;
     padding: 15px;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 0;
     z-index: 10;
+
+    /* Additionals */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 20px;
 }
 
 .navbar-links {
@@ -71,6 +79,11 @@ body {
     margin-top: 100px; /* Space for navbar */
     text-align: left;
     color: white;
+    
+    /* Additionals */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
 }
 
 
@@ -123,7 +136,8 @@ body {
     color: #eeeeee;
 }
 .about-section {
-    padding: 20px;
+    /* padding: 20px; */
+    padding: 40px 20px;
     background-color: #2F3645;
   }
   #skills{
@@ -131,7 +145,10 @@ body {
   }
   .content-wrapper {
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
   }
   
   .text-content {
@@ -143,14 +160,31 @@ body {
   
   .image-container {
     margin-left: 20px;
+
+    /* Additionals */
+    flex-shrink: 0;
   }
   
   .hero-image {
-    width: 150px; /* Adjust the size as needed */
+    /* Additionals */
+    max-width: 300px;
+    width: 100%;
+    /* width: 150px; Adjust the size as needed */
     height: 200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
      /* Makes the image circular */
   }
+
+  /* Additionals */
+  #skills ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+  /* Additionals */
   .int{
     margin-top: 50px;
     font-family: 'Franklin Gothic Medium';
@@ -221,6 +255,9 @@ body {
 }
 .contact{
     background-color: azure;
+
+    /* Additionals */
+    padding: 30px 20px;
     
 }
 .personal {
@@ -243,7 +280,8 @@ body {
   }
   .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
   
@@ -275,9 +313,164 @@ body {
     font-family: 'Franklin Gothic Medium';
     font-size: 40px;
     color: #D8D9DA;
+
+    /* Additionals */
+    padding: 40px 20px;
   }
   ul{
     list-style-type: none;
     padding-left: 0;
     margin-left: 20px;
   }
+
+  /* Additionals */
+  /* Logo Styling */
+.logoImage {
+  width: 60px;
+  height: auto;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 1024px) {
+  .hero-title {
+      font-size: 4.5rem;
+      margin-left: 0;
+      text-align: center;
+  }
+  .hero-desc, .hero-subtitle {
+      font-size: 1.3rem;
+      text-align: center;
+  }
+  .hero-content {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: row; /* Keep items in a row */
+      justify-content: space-between; /* Prevent stacking */
+  }
+
+  .navbar-links {
+      display: flex;
+      gap: 15px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+}
+.hero-desc, .hero-subtitle {
+    font-size: 1.2rem;
+}
+.hero-link {
+    padding: 8px 16px;
+    font-size: 1rem;
+}
+  
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center; /* Keeps content centered only on small screens */
+}
+
+.grid-container {
+    grid-template-columns: 1fr; /* Stack items on smaller screens */
+}
+
+.hero-image {
+    max-width: 250px;
+}
+}
+
+/* Ensure content doesn't break */
+@media (max-width: 480px) {
+  .navbar {
+      padding: 10px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+}
+.hero-desc, .hero-subtitle {
+    font-size: 1rem;
+}
+.hero-content {
+    margin-top: 80px;
+    padding: 0 15px;
+}
+.hero-link {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+.grid-container {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.hero-image {
+    max-width: 200px;
+}
+
+/* Hide image-hero
+.image-container {
+  display: none;
+} */
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  color: gray;
+}
+
+/* ✅ Hamburger Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  z-index: 1001; /* Ensures button stays above */
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: relative;
+    z-index: 1002; /* Ensures visibility */
+  }
+
+  /* ✅ Full-width menu without extra space */
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%; /* Fixed width issue */
+    background: black;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* ✅ Show Menu When Open */
+  .navbar-links.open {
+    display: flex;
+    width: 100vw; /* Ensures full screen width */
+  }
+
+  .navbar-links li {
+    padding: 15px 0;
+    width: 100%; /* Ensures menu items take full width */
+  }
+}
+
+/* Additionals */
