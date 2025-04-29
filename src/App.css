@@ -422,38 +422,18 @@ ul {
 }
 
 /* Responsive Design */
+
+/* For screens 1200px and below */
 @media (max-width: 1200px) {
     .hero-title {
         font-size: 6rem;
     }
-    .accordion{
-      grid-template-columns: repeat(3, 1fr); 
+    .accordion {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 992px) {
-    .hero-content {
-        flex-direction: column;
-        gap: 20px;
-        padding-top: 50px;
-    }
-
-    .hero-title {
-        font-size: 5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.8rem;
-    }
-
-    .hero-desc {
-        font-size: 1.5rem;
-    }
-    .accordion{
-      grid-template-columns: repeat(2, 1fr); 
-    }
-}
-
+/* For screens 768px and below */
 @media (max-width: 768px) {
     body {
         font-size: 18px;
@@ -487,12 +467,14 @@ ul {
     .logoImage {
         height: 35px;
     }
-    .accordion{
-      grid-template-columns: repeat(2, 1fr); 
+
+    .accordion {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 576px) {
+/* For screens 480px and below */
+@media (max-width: 480px) {
     body {
         font-size: 16px;
     }
@@ -535,51 +517,15 @@ ul {
         flex-direction: column;
     }
 
-    .mock, .photo, .poster, .hero-image {
+    .mock,
+    .photo,
+    .poster,
+    .hero-image {
         max-width: 100%;
         height: auto;
     }
-    .accordion{
-      grid-template-columns: repeat(1, 1fr); 
-    }
-}
 
-@media (max-width: 320px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .hero-desc {
-        font-size: 1rem;
-    }
-
-    .hero-link {
-        font-size: 1rem;
-        padding: 6px 12px;
-    }
-
-    .navbar-link {
-        font-size: 1.3rem;
-        margin: 0 10px;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .logoImage {
-        height: 25px;
-    }
-
-    .navbar {
-        padding: 10px 10px;
-    }
-    .accordion{
-      grid-template-columns: repeat(1, 1fr); 
+    .accordion {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
