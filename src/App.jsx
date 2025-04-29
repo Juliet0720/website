@@ -3,6 +3,8 @@ import './App.css'
 import Hero from '/src/components/Hero'
 import About from '/src/pages/about'
 import Project from '/src/pages/project'
+import Contact from '/src/pages/contact'
+
 
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
           <Route path='/' element={<Hero/>} />
           <Route path='/about' element={<About/>} /> 
           <Route path='/project' element={<Project/>} /> 
-
+          <Route path='/contact' element={<Contact/>} />  
         </Routes>
       </div>
     

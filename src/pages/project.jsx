@@ -40,9 +40,27 @@ const Project = () => {
   I'm currently working on several exciting projects:
 </p>
 <ul>
-  <li className="desc">
-    <strong>Personal Portfolio Website:</strong> Redesigning my portfolio to showcase recent work, incorporating modern design trends and advanced CSS animations.
-  </li>
+ 
+   <h3><strong className="strong">Personal Portfolio Website</strong></h3>  
+   <p className="desc">
+   Redesigning my portfolio to showcase recent work, incorporating modern design trends 
+   and advanced CSS animations.
+      </p>
+  <h3><strong className="strong">Weekly Project</strong></h3>
+      <p className="desc">
+        Here’s the link to my weekly project repository:
+      </p>
+      <li className="desc"> Scientific Calculator:
+        <a href="https://github.com/your-username/your-weekly-project" target="_blank" rel="noopener noreferrer" className="github-link">
+          View Weekly Project on GitHub
+        </a>
+      </li>
+      <li className="desc"> Pokemon:
+        <a href="https://github.com/your-username/your-weekly-project" target="_blank" rel="noopener noreferrer" className="github-link">
+          View Weekly Project on GitHub
+        </a>
+      </li>
+      {/* ✨ Weekly Project Section End ✨ */}
   <p className="desc">Here's some projects I have done using Adobe Illustrator and Photoshop</p>
  <h3><strong className="strong">Mock up and Logo</strong></h3> 
   <li>

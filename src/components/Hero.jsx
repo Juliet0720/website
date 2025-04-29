@@ -4,11 +4,7 @@ import myLogo from "../assets/julsLogo.png";
 const Hero = () => {
         return (
             <div className="hero-contain"> 
-                <nav className="navbar">
-                    <div className="navbar-left">
-                        <img className="logoImage" src={myLogo} alt="Logo" />
-                    </div>
-                </nav>
+              
     
                 <div className="hero-content">
                     <div className="hero-text">
