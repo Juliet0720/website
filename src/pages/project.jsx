@@ -17,6 +17,25 @@ import pictureEight from "../assets/6186024448944095280.jpg"
 import myLogo from "../assets/julsLogo.png"
 import { FaGithub, FaExternalLinkAlt, FaCode, FaBriefcase, FaPalette, FaAward, FaSearch, FaTimes } from "react-icons/fa"
 import "../assets/project.css"
+import devImg from "../assets/innovision.png"
+
+//certificates
+import cyberSec from "../assets/cybersec.png"
+import ethHack from "../assets/ethHack.png"
+import cloudSec from "../assets/cloudSec.png"
+import compNet from "../assets/comNet.png"
+import cissp from "../assets/cissp.png"
+import reactJs from "../assets/reactJs.png"
+import funData from "../assets/funData.png"
+import sqlInject from "../assets/sqlInject.png"
+import pmpBasic from "../assets/pmpBasic.png"
+import mlAlgo from "../assets/MlAlgo.png"
+import agile from "../assets/agile.png"
+import dataScience from "../assets/dataSci.png"
+import pyLib from "../assets/pyLib.png"
+import opencv from "../assets/opencv.png"
+import mlWithR from "../assets/MlWithR.png"
+import SandUmachine from "../assets/supervised.png"
 
 const Project = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -27,12 +46,21 @@ const Project = () => {
   // Experience data
   const experiences = [
     {
-      image: "https://via.placeholder.com/300x200?text=TechVision",
+      image: devImg,
       company: "Innovision",
       role: "System Analyst",
       duration: "Jan 2022 - Present",
       description:
-        "PredictEd",
+        "PredictEd: A System created for SHS grading system with bheaviour system",
+      technologies: ["PHP", "MySQL", "HTML"],
+    },
+    {
+      image: devImg,
+      company: "SupplyEase",
+      role: "Backend Developer",
+      duration: "Jan 2022 - Present",
+      description:
+        "PredictEd: A System created for SHS grading system with bheaviour system",
       technologies: ["PHP", "MySQL", "HTML"],
     },
     
@@ -65,9 +93,94 @@ const Project = () => {
       name: "Introduction to Cyber Security",
       issuer: "Simplilearn",
       date: "2025",
-     // credential: "AWS-DEV-12345",
-      image: "https://via.placeholder.com/800x600?text=AWS+Certificate",
+      hours: "2 hours" ,
+      code: "8202989",
+      image: cyberSec,
     },
+    {
+      name: "Ethical Hacking 101",
+      issuer: "Simplilearn",
+      date: "2025",
+      hours: "2 hours" ,
+      code: "8204855",
+      image: ethHack,
+    },
+    {
+      name: "Introduction to Cloud Security",
+      issuer: "Simplilearn",
+      date: "2025",
+      hours: "7 hours" ,
+      code: "8206489",
+      image: cloudSec,
+    },
+    {
+      name: "Introduction to Computer Networking",
+      issuer: "Simplilearn",
+      date: "2025",
+      hours: "6 hours" ,
+      code: "8209385",
+      image: compNet,
+    },
+    {
+      name: "ReactJS Project for Beginners",
+      issuer: "Simplilearn",
+      date: "2025",
+      hours: "2 hours" ,
+      code: "8210691",
+      image: reactJs,
+    },
+    {
+      name: "Introduction to Fundamentals of Databases",
+      issuer: "Simplilearn",
+      date: "2025",
+      hours: "7 hours" ,
+      code: "8213983",
+      image: funData,
+    },
+    {
+      name: "SQL Injection for Beginners",
+      issuer: "Simplilearn",
+      date: "2025",
+      hours: "2 hours" ,
+      code: "8211282",
+      image: sqlInject,
+    },
+    {
+      name: "PMP Basics",
+      issuer: "Simplilearn",
+      date: "2025",
+      hours: "9 hours" ,
+      code: "8216570",
+      image: pmpBasic,
+    },
+    {
+      name: "Getting Started with Machine Learning Algorithms",
+      issuer: "Simplilearn",
+      date: "2025",
+      hours: "6 hours" ,
+      code: "8218398",
+      image: mlAlgo,
+    },
+    {
+      name: "Introduction to Agile",
+      issuer: "Simplilearn",
+      date: "2025",
+      hours: "4 hours" ,
+      code: "8219843",
+      image: agile,
+    },
+    {
+      name: "Introduction to Data Science",
+      issuer: "Simplilearn",
+      date: "2025",
+      hours: "7 hours" ,
+      code: "8222269",
+      image: dataScience,
+    },
+
+
+
+
   ]
 
   // Graphics categories
@@ -337,7 +450,10 @@ const handleSectionChange = (section) => {
                 <strong>Date:</strong> {selectedCertificate.date}
               </p>
               <p>
-                <strong>Credential ID:</strong> {selectedCertificate.credential}
+                <strong>Hours:</strong> {selectedCertificate.hours}
+              </p>
+              <p>
+                <strong>Certificate Code:</strong> {selectedCertificate.code}
               </p>
             </div>
           </div>
