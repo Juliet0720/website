@@ -437,6 +437,9 @@ p{
   }
   .navbar-links.open {
       display: flex;
+      background-color: #111111;
+      position: absolute;
+
   }
   .navbar-links li {
       padding: 10px 0;
