@@ -29,6 +29,7 @@ const About = () => {
               <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
                        <li><NavLink to="/" className="navbar-link">Home</NavLink></li>
                         <li><NavLink to="/project" className="navbar-link">Projects</NavLink></li>
+                        <li><NavLink to="/blog" className="navbar-link">Blog</NavLink></li>
                         <li><NavLink to="/contact" className="navbar-link">Contact</NavLink></li>
                         
                     </ul>
