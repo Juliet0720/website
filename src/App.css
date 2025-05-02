@@ -10,6 +10,9 @@ body {
     overflow-x: hidden;
 }
 
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
 /* Hero Section */
 .hero-contain {
     height: 100vh;
@@ -60,7 +63,7 @@ body {
     display: flex;
     align-items: center;
     gap: 30px;
-    max-width: 1200px;
+    max-width: 900px;
     text-align: center;
     flex-wrap: wrap;
     justify-content: center;
@@ -114,10 +117,11 @@ body {
 .hero-subtitle {
     color: #ff6666;
     font-size: 2rem;
-    margin: 10px 0;
+    margin-top: -3rem;
     opacity: 0.8;
     animation: fadeInSubtitle 2.8s ease forwards;
     opacity: 0;
+    font-family: 'VT323';
 }
 
 @keyframes fadeInSubtitle {
@@ -131,29 +135,33 @@ body {
     }
 }
 
-.hero-desc {
-    font-family: 'Lora', serif;
-    font-size: 1.8rem;
-    margin: 20px 0;
-    color: #cccccc;
-    animation: fadeInDesc 3s ease forwards;
-    opacity: 0;
+.typing {
+    font-size: 1.5rem;
+    font-weight: 200;
+    padding: 0.6rem 0 3rem 1.5rem;
+    white-space: pre-line;
 }
 
-@keyframes fadeInDesc {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
+.cursor {
+    display: inline-block;
+    width: 1px;
+    background-color: #fff;
+    animation: blink 0.7s infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 50%, 100% {
         opacity: 1;
-        transform: translateY(0);
+    }
+    25%, 75% {
+        opacity: 0;
     }
 }
 
 .hero-link {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: -3rem;
     padding: 12px 30px;
     background: #e50914;
     color: #ffffff;
@@ -295,20 +303,9 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.mock, .poster, .photo {
-    height: 150px;
-    width: auto;
-    max-width: 100%;
-    object-fit: contain;
-    border: 3px solid #e50914;
-    padding: 10px;
-    background-color: #111111;
-    box-shadow: 0 0 15px #550000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 10px;
-}
 
-.hero-image:hover, .photo:hover, .poster:hover, .mock:hover {
+
+.hero-image:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px #e50914;
 }
@@ -322,31 +319,12 @@ body {
     list-style: none;
 }
 
-.int,.title, .title-contact, .title-proj {
+.int,.title, .title-contact {
     font-size: 3rem;
     text-align: center;
     margin: 40px 0;
     color: #e50914;
     text-shadow: 2px 2px 15px #550000;
-}
-.strong{
-  font-size: 3rem;
-  text-align: center;
-  margin-left: 1rem;
-  color: #e50914;
-  text-shadow: 2px 2px 15px #550000;
-}
-.github-link {
-  color: #4fa3f7; /* Light blue link */
-  text-decoration: underline;
-  font-weight: bold;
-}
-.github-link:hover {
-  color: #82cfff; /* Brighter on hover */
-}
-ul {
-  list-style-type: none;
-  padding-left: 0;
 }
 
 
@@ -368,7 +346,52 @@ ul {
     font-size: 18px;
     background-color: #111111;
 }
+/*Blog-Section*/
 
+/* Blog Content Styling */
+/* Blog Content Styling */
+.blog-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Vertically center content */
+    align-items: center;      /* Horizontally center content */
+    margin-top: 100px; /* To account for fixed navbar */
+    text-align: center;  /* Ensure text is centered */
+  }
+  
+  /* Blog Title */
+  .blog-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: red; /* Red color for title */
+  }
+  
+  /* Blog Description */
+  .blog-description {
+    font-size: 1.25rem;
+    max-width: 700px; /* Prevent stretching of text */
+    margin: 0 auto 30px; /* Center description and add bottom margin */
+    color: #f4f4f4;
+  }
+  
+  /* Blog Link Button */
+  .blog-link {
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: red; /* Red button background */
+    color: #000;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .blog-link:hover {
+    transform: scale(1.05);
+    background-color: #cc0000; /* Darker red on hover */
+  }
+  
 
 /* Grid Container */
 .grid-container {
@@ -468,17 +491,16 @@ ul {
         height: 35px;
     }
 
-    .accordion {
-        grid-template-columns: repeat(2, 1fr);
-    }
+   
 }
 
 /* For screens 480px and below */
 @media (max-width: 480px) {
     body {
         font-size: 16px;
+        overflow-x: hidden;
     }
-
+    
     .hero-title {
         font-size: 3rem;
     }
@@ -517,15 +539,11 @@ ul {
         flex-direction: column;
     }
 
-    .mock,
-    .photo,
-    .poster,
-    .hero-image {
-        max-width: 100%;
-        height: auto;
-    }
+   
 
     .accordion {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+

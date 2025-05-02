@@ -5,7 +5,7 @@ import myLogo from '../assets/julsLogo.png';
 // import day1Img from '../assets/day1.jpg';
 import day1Img from '../assets/day1.jpg';
 
-const Blog = () => {
+const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
  
   return (
@@ -39,4 +39,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Contact;

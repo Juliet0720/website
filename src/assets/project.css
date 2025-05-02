@@ -1,0 +1,623 @@
+
+.project-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+  position: relative;
+}
+/* Loading Animation */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.loader-circle {
+  width: 16px;
+  height: 16px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background-color: #007bff;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.loader-circle:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loader-circle:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+.loading-screen p {
+  font-size: 18px;
+  color: #333;
+  letter-spacing: 1px;
+  animation: fadeInOut 1.5s infinite;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Section Navigation */
+.section-nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.section-nav button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 25px;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.section-nav button:hover {
+  background-color: #f0f0f0;
+}
+
+.section-nav button.active {
+  color: #007bff;
+  background-color: #f0f7ff;
+}
+
+.section-nav button.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #007bff;
+}
+
+/* Section styles */
+.section {
+  margin-bottom: 60px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+}
+
+/* Development Experience Section */
+.experience-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.experience-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #007bff;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.experience-header h2 {
+  font-size: 20px;
+  color: #333;
+}
+
+.experience-duration {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.experience-role {
+  font-size: 16px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.experience-description {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background-color: #f0f7ff;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Weekly Projects Section */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-thumbnail {
+  flex: 0 0 200px;
+  overflow: hidden;
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-thumbnail img {
+  transform: scale(1.05);
+}
+
+.project-details {
+  flex: 1;
+  padding: 20px;
+}
+
+.project-details h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-details p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.project-link.github {
+  background-color: #24292e;
+  color: white;
+}
+
+.project-link.live {
+  background-color: #007bff;
+  color: white;
+}
+
+.project-link:hover {
+  opacity: 0.9;
+}
+
+/* Graphics Section */
+.graphics-category {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.masonry-item {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  animation: fadeSlideUp 0.6s ease forwards;
+}
+
+.masonry-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.masonry-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+.masonry-item:hover img {
+  filter: brightness(1.1);
+}
+
+/* Certificates Section */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.certificate-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.certificate-image-container {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+
+.certificate-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.certificate-card:hover .certificate-image {
+  transform: scale(1.05);
+}
+
+.certificate-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+}
+
+.certificate-card:hover .certificate-overlay {
+  opacity: 1;
+}
+
+.view-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.certificate-info {
+  padding: 15px;
+}
+
+.certificate-info h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.certificate-issuer,
+.certificate-date {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+/* Certificate Modal */
+.certificate-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.certificate-modal-content {
+  background-color: white;
+  border-radius: 10px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.certificate-modal-image {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.certificate-modal-details {
+  padding: 20px;
+  background-color: white;
+}
+
+.certificate-modal-details h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.certificate-modal-details p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.certificate-card {
+  animation: fadeSlideUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* Add stagger effect if using JavaScript later for delay */
+.certificate-card:nth-child(1) { animation-delay: 0.1s; }
+.certificate-card:nth-child(2) { animation-delay: 0.2s; }
+.certificate-card:nth-child(3) { animation-delay: 0.3s; }
+/* Extend for more children if needed */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.certificate-modal-content {
+  animation: zoomIn 0.4s ease forwards;
+  opacity: 0;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.view-icon {
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+  }
+
+  .navbar-links.open {
+    transform: translateY(0);
+  }
+
+  .navbar-link {
+    margin: 10px 0;
+  }
+
+  .section-nav {
+    flex-wrap: wrap;
+  }
+
+  .section-nav button {
+    flex: 1 0 auto;
+    padding: 10px 15px;
+  }
+
+  .experience-cards,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-thumbnail {
+    flex: 0 0 200px;
+  }
+
+  .masonry-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .certificates-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .certificate-modal-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-nav button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .masonry-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-image-container {
+    height: 180px;
+  }
+}
