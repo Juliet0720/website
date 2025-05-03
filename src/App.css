@@ -2,98 +2,166 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap");
 
+/* Add a CSS reset to prevent conflicts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
-    margin: 0;
-    background-color: #000000; /* pure black */
-    font-family: 'VT323', monospace;
-    color: #ffffff;
-    font-size: 20px;
-    overflow-x: hidden;
+  margin: 0;
+  background-color: #000000; /* pure black */
+  font-family: "VT323", monospace;
+  color: #ffffff;
+  font-size: 20px;
+  overflow-x: hidden;
+  width: 100%; /* Ensure body takes full width */
+  position: relative; /* For proper positioning context */
 }
 
-p{
-    font-family: 'Courier New', Courier, monospace;
+p {
+  font-family: "Courier New", Courier, monospace;
 }
-
-
 
 .navbar {
-    width: 100%;
-    background-color: #111111;
-    padding: 10px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0; /* This makes it stick to the top */
-    z-index: 10;
-    box-shadow: 0 2px 10px -5px #550000;
-    box-sizing: border-box;
-  }
-  
+  width: 100%;
+  background-color: #111111;
+  padding: 10px 20px; /* Reduced side padding from 40px to 20px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0; /* This makes it stick to the top */
+  z-index: 10;
+  box-shadow: 0 2px 10px -5px #550000;
+  box-sizing: border-box;
+}
 
 .navbar-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-link {
-    font-family: 'Rajdhani', monospace;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.8rem;
-    margin: 0 25px;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-family: "Rajdhani", monospace;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin: 0 15px; /* Reduced from 25px to 15px */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .navbar-link:hover {
-    color: #e50914;
-    text-shadow: 0 0 8px #e50914;
-}
-/* Hamburger Menu for Mobile */
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: #e50914;
-    cursor: pointer;
-  }
-  
-.footer {
-    text-align: center;
-    padding: 20px;
-    color: #555;
-    font-size: 18px;
-    background-color: #111111;
+  color: #e50914;
+  text-shadow: 0 0 8px #e50914;
 }
 
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #e50914;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-size: 18px;
+  background-color: #111111;
+  width: 100%; /* Ensure footer takes full width */
+}
 
 @media (max-width: 768px) {
   .menu-toggle {
-      display: block;
+    display: block;
   }
-  .navbar-links {
-      display: none;
-      flex-direction: column;
-      background-color: #111111;
-      width: 100%;
-      position: absolute;
-      top: 60px;
-      left: 0;
-  }
-  .navbar-links.open {
-      display: flex;
-      background-color: #111111;
-      position: absolute;
 
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111111;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 20; /* Ensure it's above other content */
   }
+
+  .navbar-links.open {
+    display: flex;
+    background-color: #111111;
+    position: absolute;
+  }
+
   .navbar-links li {
-      padding: 10px 0;
-      border-top: 1px solid #e50914;
+    padding: 10px 0;
+    border-top: 1px solid #e50914;
+  }
+
+  .navbar-link {
+    font-size: 1.5rem; /* Smaller font size on mobile */
+    margin: 0 10px; /* Reduced margin on mobile */
   }
 }
 
-/* Responsive Design */
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+  .hero-contain {
+    height: -webkit-fill-available;
+  }
+}
+
+/* Smaller screens */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 15px; /* Further reduce padding on very small screens */
+  }
+
+  .navbar-link {
+    font-size: 1.3rem; /* Even smaller font on very small screens */
+  }
+}
+
+/* Small Mobile (320px and below) */
+@media (max-width: 320px){
+    .navbar {
+        padding: 10px 15px; /* Further reduce padding on very small screens */
+      }
+    
+      .navbar-link {
+        font-size: 1.3rem; /* Even smaller font on very small screens */
+      }
+}
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff0000, #550000);
+    border-radius: 10px;
+    border: 2px solid #1a1a1a;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #cc0000, #440000);
+  }
