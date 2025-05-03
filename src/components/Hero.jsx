@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { motion } from 'framer-motion';
 import React, {useState, useEffect } from 'react';
+import "../assets/hero.css"
 const Hero = () => {
     const fullText = "A front-end web developer, focusing on making websites user-friendly and visually appealing to prioritize a great user experience.";
     const [displayedText, setDisplayedText] = useState("");
@@ -31,12 +32,6 @@ const Hero = () => {
     }, []);
         return (
             <div className="hero-contain"> 
-                {/* ⚡ Lightning flash overlay */}
-            <motion.div
-                className="lightning-flash"
-                animate={{ opacity: flashVisible ? 1 : 0 }}
-                transition={{ duration: 0.15 }}
-            />
     
                 <div className="hero-content">
                     <div className="hero-text">

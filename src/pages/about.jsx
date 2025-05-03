@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink } from "react-router-dom";
 import myPhoto from "../assets/myPhoto.jpg";
 import logoHTML from "../assets/html-logo.png";
@@ -8,10 +8,32 @@ import logoPS from "../assets/photoshop-logo.png";
 import logoReact from "../assets/react-logo.png";
 import logoIllustrator from "../assets/illustrator-logo.png";
 import myLogo from "../assets/julsLogo.png";
+import "../assets/about.css"
 
 
 const About = () => {
   const [isOpen, setIsOpen] = useState(false);
+  useEffect(() => {
+    const elements = document.querySelectorAll('.intro, .career-goals');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Only trigger once
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach(el => observer.observe(el));
+
+    return () => {
+      elements.forEach(el => observer.unobserve(el));
+    };
+  }, []);
 
     return (
         <div>
@@ -40,14 +62,14 @@ const About = () => {
     <div className="text-content">
       <div className="intro">
         <h3>Introduction</h3>
-        <p>
+        <p className="paragraph">
          Hello! I'm Juliet Icawalo, a passionate front-end web developer dedicated to
           crafting engaging and user-friendly web experiences. 
         </p>
       </div>
       <div className="career-goals">
         <h3>Career Goals</h3>
-        <p>
+        <p className="paragraph">
           My immediate goal is to deepen my expertise in front-end frameworks like
           React. Long-term, I aspire to lead a team of front-end developers,
           driving innovative projects that make a meaningful impact on users' lives.
