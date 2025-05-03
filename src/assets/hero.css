@@ -86,9 +86,10 @@
 }
 
 .hero-title {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: bold;
-  margin: 20px 0;
+ margin-top: -5rem;
+ margin-bottom: 3rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   color: #ffffff;
@@ -112,7 +113,7 @@
 .hero-subtitle {
   color: #ff6666;
   font-size: 2rem;
-  margin-top: -3rem;
+  margin-top: 0.5rem;
   opacity: 0.8;
   animation: fadeInSubtitle 2.8s ease forwards;
   opacity: 0;
@@ -160,7 +161,7 @@
 
 .hero-link {
   display: inline-block;
-  margin-top: -3rem;
+  margin-top: 1rem;
   padding: 12px 30px;
   background: #e50914;
   color: #ffffff;
@@ -273,7 +274,7 @@
   .hero-link {
     font-size: 1.2rem;
     padding: 10px 20px;
-    margin-top: -2rem;
+    margin-top: 2rem;
   }
 }
 
@@ -308,7 +309,7 @@
   .hero-link {
     font-size: 1rem;
     padding: 8px 18px;
-    margin-top: -1.5rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -331,6 +332,6 @@
   .hero-link {
     font-size: 0.9rem;
     padding: 7px 15px;
-    margin-top: -1rem;
+    margin-top: 1rem;
   }
 }
