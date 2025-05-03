@@ -18,6 +18,8 @@ import myLogo from "../assets/julsLogo.png"
 import { FaGithub, FaExternalLinkAlt, FaCode, FaBriefcase, FaPalette, FaAward, FaSearch, FaTimes } from "react-icons/fa"
 import "../assets/project.css"
 import devImg from "../assets/innovision.png"
+import pokemon from "../assets/pokemon.jpg"
+import scical from "../assets/scical.png"
 
 //certificates
 import cyberSec from "../assets/cybersec.png"
@@ -36,6 +38,29 @@ import pyLib from "../assets/pyLib.png"
 import opencv from "../assets/opencv.png"
 import mlWithR from "../assets/MlWithR.png"
 import SandUmachine from "../assets/supervised.png"
+import neuNet from "../assets/neuNet.png"
+import html from "../assets/html.png"
+import php from "../assets/php.png"
+import java from "../assets/java.png"
+import webDev from "../assets/webDev.png"
+import mongoDB from "../assets/mongoDb.png"
+import advPy from "../assets/advPy.png"
+import cplus from "../assets/c++.png"
+import sortAlgo from "../assets/sortAlgo.png"
+import pyPandas from "../assets/pyPandas.png"
+import cSharp from "../assets/cSharp.png"
+import masterAI from "../assets/masterAi.png"
+import dataBricks from "../assets/dataBricks.png"
+import appBuild from "../assets/appBuild.png"
+import nodeJs from "../assets/nodeJs.png"
+import css from "../assets/css.png"
+import googleCloud from "../assets/googleCloud.png"
+import numpy from "../assets/numpy.png"
+import javaServlet from "../assets/javaServlet.png"
+import pyData from "../assets/pyData.png"
+import deepLearning from "../assets/deepLearning.png"
+import githubCo from "../assets/githubCo.png"
+
 
 const Project = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -63,6 +88,15 @@ const Project = () => {
         "PredictEd: A System created for SHS grading system with bheaviour system",
       technologies: ["PHP", "MySQL", "HTML"],
     },
+    {
+      image: devImg,
+      company: "Industry Visit Blog",
+      role: "Front-end Developer",
+      duration: "April 2025 - Present",
+      description:
+        "Industry Visit: a blog that contains memories of Educational Tour",
+      technologies: ["PHP", "MySQL", "HTML"],
+    },
     
   ]
 
@@ -72,16 +106,17 @@ const Project = () => {
       name: "Scientific Calculator",
       description:
         "A fully functional scientific calculator with advanced mathematical operations, history tracking, and theme customization.",
-      thumbnail: "https://via.placeholder.com/300x200?text=Calculator+Project",
-      github: "https://github.com/yourusername/scientific-calculator",
-      live: "https://scientific-calculator-demo.vercel.app",
+      image: scical ,
+      github: "https://github.com/Chris272019/SCI_CAL",
+      live: "https://scicalcu.netlify.app/",
     },
     {
-      name: "Pokemon Explorer",
+     image: pokemon,
+      name: "Pokemon App",
       description:
-        "Interactive Pokemon database that allows users to search, filter, and view detailed information about different Pokemon species.",
-      thumbnail: "https://via.placeholder.com/300x200?text=Pokemon+Project",
-      github: "https://github.com/yourusername/pokemon-explorer",
+        "Interactive Pokemon database that allows users to search, battle, and view detailed information about different Pokemon species.",
+      
+      github: "https://github.com/Chris272019/Pokemon",
       live: "https://pokemon-explorer-demo.vercel.app",
     },
   ]
@@ -89,99 +124,46 @@ const Project = () => {
   // Certificates data with image paths
   // You'll replace these placeholder URLs with your actual certificate images
   const certificates = [
-    {
-      name: "Introduction to Cyber Security",
-      issuer: "Simplilearn",
-      date: "2025",
-      hours: "2 hours" ,
-      code: "8202989",
-      image: cyberSec,
-    },
-    {
-      name: "Ethical Hacking 101",
-      issuer: "Simplilearn",
-      date: "2025",
-      hours: "2 hours" ,
-      code: "8204855",
-      image: ethHack,
-    },
-    {
-      name: "Introduction to Cloud Security",
-      issuer: "Simplilearn",
-      date: "2025",
-      hours: "7 hours" ,
-      code: "8206489",
-      image: cloudSec,
-    },
-    {
-      name: "Introduction to Computer Networking",
-      issuer: "Simplilearn",
-      date: "2025",
-      hours: "6 hours" ,
-      code: "8209385",
-      image: compNet,
-    },
-    {
-      name: "ReactJS Project for Beginners",
-      issuer: "Simplilearn",
-      date: "2025",
-      hours: "2 hours" ,
-      code: "8210691",
-      image: reactJs,
-    },
-    {
-      name: "Introduction to Fundamentals of Databases",
-      issuer: "Simplilearn",
-      date: "2025",
-      hours: "7 hours" ,
-      code: "8213983",
-      image: funData,
-    },
-    {
-      name: "SQL Injection for Beginners",
-      issuer: "Simplilearn",
-      date: "2025",
-      hours: "2 hours" ,
-      code: "8211282",
-      image: sqlInject,
-    },
-    {
-      name: "PMP Basics",
-      issuer: "Simplilearn",
-      date: "2025",
-      hours: "9 hours" ,
-      code: "8216570",
-      image: pmpBasic,
-    },
-    {
-      name: "Getting Started with Machine Learning Algorithms",
-      issuer: "Simplilearn",
-      date: "2025",
-      hours: "6 hours" ,
-      code: "8218398",
-      image: mlAlgo,
-    },
-    {
-      name: "Introduction to Agile",
-      issuer: "Simplilearn",
-      date: "2025",
-      hours: "4 hours" ,
-      code: "8219843",
-      image: agile,
-    },
-    {
-      name: "Introduction to Data Science",
-      issuer: "Simplilearn",
-      date: "2025",
-      hours: "7 hours" ,
-      code: "8222269",
-      image: dataScience,
-    },
-
-
-
-
-  ]
+    { name: "Introduction to Cyber Security", issuer: "Simplilearn", date: "2025", hours: "2 hours", code: "8202989", image: cyberSec },
+    { name: "Ethical Hacking 101", issuer: "Simplilearn", date: "2025", hours: "2 hours", code: "8204855", image: ethHack },
+    { name: "Introduction to Cloud Security", issuer: "Simplilearn", date: "2025", hours: "7 hours", code: "8206489", image: cloudSec },
+    { name: "Introduction to Computer Networking", issuer: "Simplilearn", date: "2025", hours: "6 hours", code: "8209385", image: compNet },
+    { name: "Introduction to CISSP Security Assessment", issuer: "Simplilearn", date: "2025", hours: "4 hours", code: "8209385", image: cissp },
+    { name: "ReactJS Project for Beginners", issuer: "Simplilearn", date: "2025", hours: "2 hours", code: "8210691", image: reactJs },
+    { name: "Introduction to Fundamentals of Databases", issuer: "Simplilearn", date: "2025", hours: "7 hours", code: "8213983", image: funData },
+    { name: "SQL Injection for Beginners", issuer: "Simplilearn", date: "2025", hours: "2 hours", code: "8211282", image: sqlInject },
+    { name: "PMP Basics", issuer: "Simplilearn", date: "2025", hours: "9 hours", code: "8216570", image: pmpBasic },
+    { name: "Getting Started with Machine Learning Algorithms", issuer: "Simplilearn", date: "2025", hours: "6 hours", code: "8218398", image: mlAlgo },
+    { name: "Introduction to Agile", issuer: "Simplilearn", date: "2025", hours: "4 hours", code: "8219843", image: agile },
+    { name: "Introduction to Data Science", issuer: "Simplilearn", date: "2025", hours: "7 hours", code: "8222269", image: dataScience },
+    { name: "Python Libraries for Data Science", issuer: "Simplilearn", date: "2025", hours: "7 hours", code: "8223968", image: pyLib },
+    { name: "Introduction to OpenCV for Beginners", issuer: "Simplilearn", date: "2025", hours: "5 hours", code: "8226735", image: opencv },
+    { name: "Introduction to Machine Learning with R", issuer: "Simplilearn", date: "2025", hours: "10 hours", code: "8242200", image: mlWithR },
+    { name: "Introduction to Supervised & Unsupervised Machine Learning", issuer: "Simplilearn", date: "2025", hours: "6 hours", code: "8243881", image: SandUmachine },
+    { name: "Introduction to Neural Network", issuer: "Simplilearn", date: "2025", hours: "4 hours", code: "8244702", image: neuNet },
+    { name: "Introduction to HTML", issuer: "Simplilearn", date: "2025", hours: "6 hours", code: "8246289", image: html },
+    { name: "Introduction to PHP", issuer: "Simplilearn", date: "2025", hours: "7 hours", code: "8248135", image: php },
+    { name: "Java Programming for Beginners", issuer: "Simplilearn", date: "2025", hours: "6 hours", code: "8249194", image: java },
+    { name: "Web Development for Beginners", issuer: "Simplilearn", date: "2025", hours: "4 hours", code: "8249406", image: webDev },
+    { name: "Introduction to MongoDB", issuer: "Simplilearn", date: "2025", hours: "5 hours", code: "8256618", image: mongoDB },
+    { name: "Advanced Python", issuer: "Simplilearn", date: "2025", hours: "10 hours", code: "8253849", image: advPy },
+    { name: "Introduction to C++", issuer: "Simplilearn", date: "2025", hours: "6 hours", code: "8255350", image: cplus },
+    { name: "Introduction to Sorting Algorithm", issuer: "Simplilearn", date: "2025", hours: "3 hours", code: "8256766", image: sortAlgo },
+    { name: "Python Pandas Basic Course", issuer: "Simplilearn", date: "2025", hours: "5 hours", code: "8256766", image: pyPandas },
+    { name: "Boost you Web Development Career: Introduction to C#", issuer: "Simplilearn", date: "2025", hours: "8 hours", code: "8259215", image: cSharp },
+    { name: "Master AI Web Application Development", issuer: "Simplilearn", date: "2025", hours: "2 hours", code: "8260004", image: masterAI },
+    { name: "Get Started with Data Bricks", issuer: "Simplilearn", date: "2025", hours: "2 hours", code: "8260074", image: dataBricks },
+    { name: "Salesforce Certified Platform App", issuer: "Simplilearn", date: "2025", hours: "12 hours", code: "8262384", image: appBuild },
+    { name: "Getting Started with NodeJS", issuer: "Simplilearn", date: "2025", hours: "5 hours", code: "8263864", image: nodeJs },
+    { name: "Introduction to CSS", issuer: "Simplilearn", date: "2025", hours: "3 hours", code: "8264759", image: css },
+    { name: "Intro to Google Cloud Platform", issuer: "Simplilearn", date: "2025", hours: "4 hours", code: "8266466", image: googleCloud },
+    { name: "Introduction to Numpy", issuer: "Simplilearn", date: "2025", hours: "2 hours", code: "8269050", image: numpy },
+    { name: "Java Servelet Basics", issuer: "Simplilearn", date: "2025", hours: "4 hours", code: "8267766", image: javaServlet },
+    { name: "Python for Data Analysis", issuer: "Simplilearn", date: "2025", hours: "3 hours", code: "8268491", image: pyData },
+    { name: "Deep Learning", issuer: "Simplilearn", date: "2025", hours: "7 hours", code: "8271162", image: deepLearning },
+    { name: "Github Copilot", issuer: "Simplilearn", date: "2025", hours: "3 hours", code: "8273413", image: githubCo },
+  ];
+  
 
   // Graphics categories
   const graphicsCategories = {
@@ -267,8 +249,8 @@ const handleSectionChange = (section) => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/project" className="navbar-link">
-              Projects
+            <NavLink to="/about" className="navbar-link">
+             About
             </NavLink>
           </li>
           <li>
@@ -327,7 +309,7 @@ const handleSectionChange = (section) => {
                    <div className="experience-image-container">
                     <img
                       src={exp.image || "/placeholder.svg"}
-                      alt={`${exp.company} logo`}
+                      alt={`${exp.company} `}
                       className="experience-image"
                     />
                   </div>
@@ -358,7 +340,7 @@ const handleSectionChange = (section) => {
               {weeklyProjects.map((project, index) => (
                 <div className="project-card" key={index}>
                   <div className="project-thumbnail">
-                    <img src={project.thumbnail || "/placeholder.svg"} alt={project.name} />
+                    <img src={project.image|| "/placeholder.svg"} alt={project.name} />
                   </div>
                   <div className="project-details">
                     <h2>{project.name}</h2>
