@@ -71,31 +71,40 @@ const Project = () => {
   // Experience data
   const experiences = [
     {
-      image: devImg,
-      company: "Innovision",
+      // image: devImg,
+       company: "Schedlr",
+       role: "Front-end Web Developer",
+       duration: "Jan 2023 - April 2023",
+       description:
+         "Schedlr was a web app designed for efficient scheduling, helping users organize tasks, meetings, and events with ease.",
+       technologies: ["HTML", "CSS", "JS"],
+     },
+     {
+      // image: devImg,
+       company: "Codex Utilitica",
+       role: "Front-end Web Developer",
+       duration: "Jan 2023 - April 2023",
+       description:
+         "Codex Utilitica was a web app that allowed users to search for topics, which were categorized and filterable for easy browsing and access.",
+       technologies: [ "HTML", "CSS", "JS"],
+     },
+    {
+     // image: devImg,
+      company: "PredictEd - Innovision",
       role: "System Analyst",
-      duration: "Jan 2022 - Present",
+      duration: "Jan 2024 - Present",
       description:
-        "PredictEd: A System created for SHS grading system with bheaviour system",
-      technologies: ["PHP", "MySQL", "HTML"],
+        "is an intelligent academic platform designed specifically for Senior High School (SHS) institutions. It integrates a grading system with a comprehensive behavioral tracking module to provide a holistic view of student performance.",
+      technologies: ["PHP", "MySQL", "HTML", "CSS"],
     },
     {
-      image: devImg,
+      //image: devImg,
       company: "SupplyEase",
-      role: "Backend Developer",
-      duration: "Jan 2022 - Present",
+      role: "Backend Web Developer",
+      duration: "Jan 2024 - Present",
       description:
-        "PredictEd: A System created for SHS grading system with bheaviour system",
-      technologies: ["PHP", "MySQL", "HTML"],
-    },
-    {
-      image: devImg,
-      company: "Industry Visit Blog",
-      role: "Front-end Developer",
-      duration: "April 2025 - Present",
-      description:
-        "Industry Visit: a blog that contains memories of Educational Tour",
-      technologies: ["PHP", "MySQL", "HTML"],
+        "SupplyEase is a user-friendly e-commerce platform dedicated to providing a wide range of high-quality school supplies, including stationery, backpacks, art materials, and classroom essentials.",
+      technologies: ["PHP", "MySQL", "HTML", "CSS"],
     },
     
   ]
@@ -307,11 +316,7 @@ const handleSectionChange = (section) => {
               {experiences.map((exp, index) => (
                 <div className="experience-card" key={index}>
                    <div className="experience-image-container">
-                    <img
-                      src={exp.image || "/placeholder.svg"}
-                      alt={`${exp.company} `}
-                      className="experience-image"
-                    />
+                  
                   </div>
                   <div className="experience-header">
                     <h2>{exp.company}</h2>
