@@ -81,23 +81,20 @@ const Contact = () => {
               <FaMapMarkerAlt className="info-icon" />
               <div>
                 <h3>Location</h3>
-                <p>Manila, Philippines</p>
+                <p>Tacurong City, Philippines</p>
               </div>
             </div>
 
             <div className="social-links">
               <h3>Connect With Me</h3>
               <div className="social-icons">
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://github.com/Juliet0720" target="_blank" rel="noopener noreferrer" className="social-icon">
                   <FaGithub />
                 </a>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="www.linkedin.com/in/juliet-icawalo-420250296" target="_blank" rel="noopener noreferrer" className="social-icon">
                   <FaLinkedin />
                 </a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                  <FaTwitter />
-                </a>
-                <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://www.facebook.com/juliet.condesaicawalo" target="_blank" rel="noopener noreferrer" className="social-icon">
                   <FaFacebook />
                 </a>
                 <a href="mailto:julieticawalo07@gmail.com" className="social-icon">
