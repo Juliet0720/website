@@ -91,7 +91,7 @@ const Contact = () => {
                 <a href="https://github.com/Juliet0720" target="_blank" rel="noopener noreferrer" className="social-icon">
                   <FaGithub />
                 </a>
-                <a href="www.linkedin.com/in/juliet-icawalo-420250296" target="_blank" rel="noopener noreferrer" className="social-icon">
+                <a href="https://linkedin.com/in/juliet-icawalo-420250296" target="_blank" rel="noopener noreferrer" className="social-icon">
                   <FaLinkedin />
                 </a>
                 <a href="https://www.facebook.com/juliet.condesaicawalo" target="_blank" rel="noopener noreferrer" className="social-icon">

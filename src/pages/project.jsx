@@ -126,7 +126,7 @@ const Project = () => {
         "Interactive Pokemon database that allows users to search, battle, and view detailed information about different Pokemon species.",
       
       github: "https://github.com/Chris272019/Pokemon",
-      live: "https://pokemon-explorer-demo.vercel.app",
+      live: "https://digiman.netlify.app/",
     },
   ]
 

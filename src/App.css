@@ -55,7 +55,7 @@ p {
   font-weight: bold;
   color: #ffffff;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   margin: 0 15px; /* Reduced from 25px to 15px */
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
